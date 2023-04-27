@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-var productSchema = new mongoose.Schema(
+var toolsSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -18,8 +18,6 @@ var productSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    serial: { type: String },
-
     brand: {
       type: String,
       required: true,
@@ -27,6 +25,7 @@ var productSchema = new mongoose.Schema(
     presentation_images: {
       type: Object,
     },
+    serial: { type: String },
     quantity: { type: Number, required: true },
     sold: { type: Number, default: 0 },
     images: {
@@ -47,4 +46,4 @@ var productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Tools", toolsSchema);
